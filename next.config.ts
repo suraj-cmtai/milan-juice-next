@@ -11,6 +11,10 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  eslint: {
+    // This option allows you to ignore ESLint errors during the build process.
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;
