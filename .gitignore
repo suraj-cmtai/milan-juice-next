@@ -39,3 +39,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+.cursor/rules/Figma-Dev-Mode-MCP-rules.mdc
+.cursor/rules/figma-rules-general.mdc

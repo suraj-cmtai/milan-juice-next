@@ -1,0 +1,120 @@
+"use client";
+
+import { motion } from "framer-motion";
+import Image from "next/image";
+
+const imgCall = "/images/call.svg";
+const imgMessage = "/images/message.svg";
+
+export default function ContactUsMain() {
+  return (
+    <section className="relative w-full py-8 px-2 flex flex-col items-center justify-center overflow-hidden bg-gradient-to-r from-[#fbdede7a] to-[#edfbde7a]">
+      <div className="relative w-full max-w-7xl mx-auto flex flex-col lg:flex-row items-start justify-between gap-8 z-10">
+        {/* Left: Info */}
+        <div className="flex-1 flex flex-col gap-6 md:gap-8 lg:gap-10 items-start justify-start py-4 px-2 sm:px-4">
+          <motion.h2
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="font-agbalumo text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 leading-tight"
+            style={{
+              background:
+                "linear-gradient(121.345deg, #DB3A43 14.347%, #5E0D10 99.019%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
+            Need more Information
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="font-outfit text-base sm:text-lg md:text-xl text-black mb-2"
+          >
+            Milan Juice Centre has been on a mission to serve nature's freshness with love.
+          </motion.p>
+          <div className="flex flex-col gap-6 mt-2">
+            {/* Phone */}
+            <div className="flex items-center gap-3">
+              <Image src={imgCall} alt="Call icon" width={32} height={32} className="w-7 h-7" />
+              <div className="font-outfit font-semibold text-lg md:text-xl text-[#1a1a1a]">
+                <p>+91 8008100687</p>
+                <p>+91 6309918500</p>
+              </div>
+            </div>
+            {/* Email */}
+            <div className="flex items-center gap-3">
+              <Image src={imgMessage} alt="Message icon" width={32} height={32} className="w-7 h-7" />
+              <div className="font-outfit font-semibold text-lg md:text-xl text-[#1a1a1a]">
+                <p>milanjuice@gmail.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Right: Contact Form */}
+        <motion.form
+          initial={{ opacity: 0, x: 40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="flex-1 bg-white/80 rounded-2xl shadow-lg p-4 sm:p-6 md:p-8 flex flex-col gap-4 max-w-xl w-full"
+        >
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1 flex flex-col gap-1">
+              <label className="font-outfit font-semibold text-base md:text-lg text-[#1a1a1a]">First Name*</label>
+              <input
+                type="text"
+                required
+                placeholder="Enter your Name"
+                className="border border-black rounded-lg px-4 py-2 font-outfit text-sm md:text-base text-[#777] focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+            <div className="flex-1 flex flex-col gap-1">
+              <label className="font-outfit font-semibold text-base md:text-lg text-[#1a1a1a]">Last Name*</label>
+              <input
+                type="text"
+                required
+                placeholder="Enter your Last Name"
+                className="border border-black rounded-lg px-4 py-2 font-outfit text-sm md:text-base text-[#777] focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4">
+            <div className="flex-1 flex flex-col gap-1">
+              <label className="font-outfit font-semibold text-base md:text-lg text-[#1a1a1a]">Email*</label>
+              <input
+                type="email"
+                required
+                placeholder="email@domain.com"
+                className="border border-black rounded-lg px-4 py-2 font-outfit text-sm md:text-base text-[#777] focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+            <div className="flex-1 flex flex-col gap-1">
+              <label className="font-outfit font-semibold text-base md:text-lg text-[#1a1a1a]">Contact*</label>
+              <input
+                type="tel"
+                required
+                placeholder="+917854xxxxx"
+                className="border border-black rounded-lg px-4 py-2 font-outfit text-sm md:text-base text-[#777] focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+            </div>
+          </div>
+          <div className="flex flex-col gap-1">
+            <label className="font-outfit font-semibold text-base md:text-lg text-[#1a1a1a]">Message <span className="text-sm font-normal">(optional)</span></label>
+            <textarea
+              rows={4}
+              placeholder="Your Message"
+              className="border border-black rounded-lg px-4 py-2 font-outfit text-sm md:text-base text-[#777] focus:outline-none focus:ring-2 focus:ring-primary resize-none"
+            />
+          </div>
+          <button
+            type="submit"
+            className="mt-2 bg-gradient-to-r from-[#921D31] to-[#FE5D5C] text-[#f2f2f2] font-outfit font-bold text-base sm:text-lg px-8 py-3 rounded-xl shadow-md hover:opacity-90 transition cursor-pointer"
+          >
+            Send Message
+          </button>
+        </motion.form>
+      </div>
+    </section>
+  );
+}
