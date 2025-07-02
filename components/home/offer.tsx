@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import GradientButton from "@/components/gradientButton";
 
 const imgImage15 = "/images/fruits-juices-bg.png";
 
@@ -64,9 +65,8 @@ export default function Offer() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="bg-gradient-to-r from-[#921D31] to-[#FE5D5C] text-[#f2f2f2] font-outfit font-bold text-base sm:text-lg px-8 py-3 rounded-xl shadow-md hover:opacity-90 transition cursor-pointer mt-2"
         >
-          Order Now
+          <GradientButton >Order Now</GradientButton>
         </motion.button>
       </div>
     </section>

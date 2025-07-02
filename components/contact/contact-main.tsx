@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import GradientButton from "@/components/gradientButton";
 
-const imgCall = "/images/call.svg";
-const imgMessage = "/images/message.svg";
+const imgCall = "/images/Call.svg";
+const imgMessage = "/images/Message.svg";
 
 export default function ContactUsMain() {
   return (
@@ -107,12 +108,9 @@ export default function ContactUsMain() {
               className="border border-black rounded-lg px-4 py-2 font-outfit text-sm md:text-base text-[#777] focus:outline-none focus:ring-2 focus:ring-primary resize-none"
             />
           </div>
-          <button
-            type="submit"
-            className="mt-2 bg-gradient-to-r from-[#921D31] to-[#FE5D5C] text-[#f2f2f2] font-outfit font-bold text-base sm:text-lg px-8 py-3 rounded-xl shadow-md hover:opacity-90 transition cursor-pointer"
-          >
+          <GradientButton>
             Send Message
-          </button>
+          </GradientButton>
         </motion.form>
       </div>
     </section>
