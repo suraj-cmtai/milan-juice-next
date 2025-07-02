@@ -4,7 +4,7 @@ import { Phone, Mail, Instagram, Facebook, Youtube, Twitter } from "lucide-react
 import { motion } from "framer-motion";
 
 const logo = "/images/logo.png";
-const imgUnion = "/images/union.png";
+const imgUnion = "/images/Union.png";
 const grapes = "/images/grapes-vector.png";
 
 const usefulLinks = [
