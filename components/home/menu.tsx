@@ -77,7 +77,7 @@ export default function Menu() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: item.delay }}
-                className="shadow-2xl flex items-center justify-center w-32 h-44 sm:w-40 sm:h-60 md:w-48 md:h-72 lg:w-56 lg:h-80 aspect-[3/4] rounded-[50%/60%] overflow-hidden mb-3 sm:mb-4 bg-white"
+                className="shadow-xl flex items-center justify-center w-32 h-44 sm:w-40 sm:h-60 md:w-48 md:h-72 lg:w-56 lg:h-80 aspect-[3/4] rounded-[50%/60%] overflow-hidden mb-3 sm:mb-4 bg-white"
                 style={{
                   borderRadius: "60% / 60%",
                 }}

@@ -10,42 +10,52 @@ const strawberries = "/images/strawberry.png";
 
 export default function Hero() {
   return (
-    <section className="relative w-full min-h-[60vh] bg-[#fbdede] overflow-hidden flex flex-col justify-center">
-      <div className="relative w-full max-w-7xl mx-auto flex items-stretch min-h-[60vh]">
-        {/* Decorative Images - Watermelon and Drip */}
+    <section className="relative w-full h-auto  bg-[#fbdede] overflow-hidden">
+      <div className="relative w-full max-w-7xl mx-auto h-auto ">
+        
+        {/* Decorative Images */}
         <img
           src={watermelon}
-          alt="Watermelon splash"
-          className="absolute left-0 top-0 w-28 sm:w-40 md:w-56 lg:w-80 h-auto z-10 select-none pointer-events-none"
+          alt=""
+          className="absolute left-0 top-0 w-20 sm:w-28 md:w-40 lg:w-56 xl:w-80 h-auto z-10"
           aria-hidden="true"
         />
         <img
           src={juiceDripping}
-          alt="Juice drip"
-          className="absolute right-0 top-0 w-24 md:w-3/4 max-w-xs sm:max-w-xs h-auto z-10 select-none pointer-events-none hidden md:block"
+          alt=""
+          className="absolute right-0 top-0 w-16 sm:w-24 md:w-32 lg:w-48 xl:w-64 h-auto z-10"
           aria-hidden="true"
         />
-        {/* Mobile BG Shake */}
-        <div className="absolute inset-0 flex md:hidden items-end justify-center z-0 pointer-events-none">
+        <img
+          src={strawberries}
+          alt=""
+          className="absolute right-2 bottom-2 sm:right-4 sm:bottom-4 w-12 sm:w-16 md:w-20 lg:w-28 xl:w-36 h-auto z-30"
+          aria-hidden="true"
+        />
+
+        {/* Mobile Background Shake Image */}
+        <div className="lg:hidden absolute inset-0 flex items-center justify-center z-0">
           <img
             src={strawberryShake}
             alt="Strawberry shake background"
-            className="w-3/4 max-w-xs opacity-50 mb-8"
+            className="w-90 h-90 object-contain opacity-30"
             aria-hidden="true"
           />
         </div>
-        {/* Main Content */}
-        <div className="relative flex flex-col-reverse md:flex-row items-center justify-between w-full px-4 pt-16 sm:pt-24 md:pt-32 pb-8 sm:pb-12 gap-4 md:gap-0 z-20 md:left-1/9">
-          {/* Centered Text and Button on mobile, left-aligned on md+ */}
+
+        {/* Main Content Layout */}
+        <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between py-8 lg:py-0 px-4 sm:px-6 lg:px-8 lg:min-h-[90vh]">
+          
+          {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="flex-1 flex flex-col items-center md:items-start justify-center w-full max-w-2xl text-center md:text-left"
+            className="flex-1 flex flex-col justify-start lg:justify-center text-left lg:pr-8 md:ml-16 xl:pr-12 order-2 lg:order-1 mt-16 lg:mt-0 xl:ml-16"
           >
             <h1
-              className="font-agbalumo text-2xl sm:text-4xl md:text-6xl lg:text-7xl leading-tight mb-6 sm:mb-8"
+              className="font-agbalumo text-6xl 2xl:text-7xl leading-tight mb-6 sm:mb-8"
               style={{
                 background:
                   "linear-gradient(100.6deg, #DB3A43 14.35%, #5E0D10 99.02%)",
@@ -53,31 +63,39 @@ export default function Hero() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Freshness in Every{"\n"}Sip with Milan Juice
+              Freshness in Every
+              <br />
+              Sip with Milan
+              <br />
+              Juice
             </h1>
-            <div className="mt-2 flex flex-col items-center md:items-start w-full">
-              <GradientButton icon={<ArrowRight className="w-5 h-5 sm:w-6 sm:h-6" />}>
+            
+            <div className="mt-2 xl:ml-16">
+              <GradientButton icon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />}>
                 Explore Our Flavours
               </GradientButton>
             </div>
           </motion.div>
-          {/* Right: Shake */}
-          <div className="flex-1 flex items-end justify-end w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg min-w-[180px] relative right-1">
-            {/* On mobile, hide shake in foreground; on md+, show as before */}
+          
+          {/* Right Column - Shake Image (Desktop Only) */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="hidden lg:flex flex-1 items-center justify-center lg:justify-end order-1 lg:order-2"
+          >
             <img
               src={strawberryShake}
               alt="Strawberry shake"
-              className="hidden md:block w-full max-w-[220px] sm:max-w-xs md:max-w-md lg:max-w-lg h-auto z-20 relative"
+              className="w-48 sm:w-56 md:w-64 lg:w-80 xl:w-96 h-auto relative"
+              style={{ 
+                marginTop: '3rem',
+                marginRight: '0.5rem'
+              }}
             />
-          </div>
+          </motion.div>
         </div>
-        {/* Strawberries in the bottom right corner, always visible */}
-        <img
-          src={strawberries}
-          alt="Strawberries"
-          className="absolute right-0 bottom-0 w-16 sm:w-24 md:w-28 lg:w-36 h-auto z-30 pointer-events-none select-none"
-          style={{ marginRight: '1rem', marginBottom: '1rem' }}
-        />
       </div>
     </section>
   );
