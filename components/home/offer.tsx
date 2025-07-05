@@ -60,14 +60,14 @@ export default function Offer() {
           your coupon code
         </motion.p>
         {/* Order Now Button */}
-        <motion.button
+        <motion.span
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
           <GradientButton >Order Now</GradientButton>
-        </motion.button>
+        </motion.span>
       </div>
     </section>
   );

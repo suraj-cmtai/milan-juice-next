@@ -8,14 +8,14 @@ const imgUnion = "/images/Union.png";
 const grapes = "/images/grapes-vector.png";
 
 const usefulLinks = [
-  { label: "Home", href: "#" },
-  { label: "About Us", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "contact Us", href: "/contact" },
   { label: "Menu", href: "#" },
 ];
 const support = [
   { icon: <Phone className="w-5 h-5" />, text: "+91 8008100687" },
   { icon: <Phone className="w-5 h-5" />, text: "+91 6309918500" },
-  { icon: <Mail className="w-5 h-5" />, text: "............Com" },
+  { icon: <Mail className="w-5 h-5" />, text: "milanjuice91@gmail.com" },
 ];
 const locations = [
   "Milan juice center   Mallepally   Opp:- Badi Masjid",

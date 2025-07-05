@@ -48,7 +48,7 @@ export default function ContactUsMain() {
             <div className="flex items-center gap-3">
               <Image src={imgMessage} alt="Message icon" width={32} height={32} className="w-7 h-7" />
               <div className="font-outfit font-semibold text-lg md:text-xl text-[#1a1a1a]">
-                <p>milanjuice@gmail.com</p>
+                <p>milanjuice91@gmail.com</p>
               </div>
             </div>
           </div>
