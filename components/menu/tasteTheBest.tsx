@@ -4,51 +4,51 @@ import { motion } from "framer-motion";
 const cardData = [
   {
     title: "Dosa",
-    image: "http://localhost:3845/assets/1587b59546741de5320a731657f953cb12933707.png",
+    image: "/images/dosa.png",
   },
   {
     title: "Lassi & Faluda",
-    image: "http://localhost:3845/assets/829843b6bd0b859f25c8af903abad04cc8bf35ba.png",
+    image: "/images/lassi.png",
   },
   {
     title: "Fruits Bowl",
-    image: "http://localhost:3845/assets/3dbb07ef0f35a770cc2e4e5cf6489094c5431a70.png",
+    image: "/images/fruit-bowl.png",
   },
   {
     title: "Shawarmas",
-    image: "http://localhost:3845/assets/314fa66c1ffb4eb2e340aeddd74d7b3bdfa7d001.png",
+    image: "/images/shawarmas.png",
   },
   {
     title: "Dry Fruits Blends",
-    image: "http://localhost:3845/assets/f409bd46f19bdc03a055745b20b85260bbc97e62.png",
+    image: "/images/dry-fruit-circle.png",
   },
   {
     title: "Idli",
-    image: "http://localhost:3845/assets/600e36be24c10ef72363167c12572f6b6f5a1dcb.png",
+    image: "/images/idli.png",
   },
   {
     title: "Vada & Mysore Bajji",
-    image: "http://localhost:3845/assets/16f0ca9129348bcddd5bc0bc992965287673c8a1.png",
+    image: "/images/vada.png",
   },
   {
     title: "Fresh Juices",
-    image: "http://localhost:3845/assets/358dd4fa455c22c3ef04b9f6662cf93395263d30.png",
+    image: "/images/fresh-juices.png",
   },
   {
     title: "Milk Shakes",
-    image: "http://localhost:3845/assets/ba55ccb08e6e6ff9ed2f8c37ac1949e6f779f515.png",
+    image: "/images/milk-shake.png",
   },
   {
     title: "Fruit Salads",
-    image: "http://localhost:3845/assets/845a7b93685dbd3211dbcde6ee71c440b02782aa.png",
+    image: "/images/fruit-salads.png",
   },
   {
     title: "Mocktails",
-    image: "http://localhost:3845/assets/7a779859ba995edfc0c3c897ae7beddc434a48ec.png",
+    image: "/images/mock-tails.png",
   },
   {
     title: "Slushes",
-    image: "http://localhost:3845/assets/746be943fb0b6a5c2f0d2132bedafec5408b9773.png",
+    image: "/images/slushes.png",
   },
 ];
 

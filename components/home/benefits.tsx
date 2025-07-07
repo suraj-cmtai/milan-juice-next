@@ -56,14 +56,14 @@ export default function Benefits() {
           "linear-gradient(122.563deg, #fff 44.062%, #fbDEDE 97.036%)",
       }}
     >
-      <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full">
-        {/* Decorative Images - Made bigger */}
+      <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full pt-20 md:pt-0">
+        {/* Decorative Images - Responsive, absolute */}
         <Image
           src={decoTopLeft}
           alt="Juice glasses deco left"
           width={200}
           height={130}
-          className="absolute left-1 top-1 w-20 sm:w-24 md:w-32 lg:w-40 xl:w-48 h-auto z-10 select-none pointer-events-none"
+          className="absolute left-2 top-4 sm:top-2 w-16 sm:w-24 md:w-32 lg:w-40 h-auto z-10 select-none pointer-events-none"
           aria-hidden="true"
         />
         <Image
@@ -71,7 +71,7 @@ export default function Benefits() {
           alt="Strawberry glass deco right"
           width={160}
           height={160}
-          className="absolute right-1 top-1 w-16 sm:w-20 md:w-24 lg:w-32 xl:w-40 h-auto z-10 select-none pointer-events-none"
+          className="absolute right-2 top-4 sm:top-2 w-14 sm:w-20 md:w-28 lg:w-36 h-auto z-10 select-none pointer-events-none"
           aria-hidden="true"
         />
         <Image
@@ -79,28 +79,24 @@ export default function Benefits() {
           alt="Apple cartoon deco bottom right"
           width={120}
           height={120}
-          className="absolute right-2 bottom-2 w-12 sm:w-16 md:w-20 lg:w-24 xl:w-32 h-auto z-10 select-none pointer-events-none"
+          className="absolute right-4 bottom-4 w-10 sm:w-16 md:w-20 lg:w-28 h-auto z-10 select-none pointer-events-none"
           aria-hidden="true"
         />
-        
         {/* Heading */}
         <h2
-          className="font-agbalumo text-center text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl mb-4 sm:mb-6 md:mb-8 leading-[1.3] px-2"
+          className="font-agbalumo text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6 md:mb-8 leading-[1.3] px-2"
           style={{
             background:
               "linear-gradient(114.627deg, #DB3A43 14.347%, #5E0D10 99.019%)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
-            paddingBottom: "0.5rem",
-            marginBottom: "1rem",
           }}
         >
           Benefits of Juices
         </h2>
-        
-        {/* Mobile Layout: Vertical Stack */}
-        <div className="lg:hidden w-full flex flex-col items-center gap-4 sm:gap-6">
+        {/* Mobile Layout: Grid of pairs */}
+        <div className="lg:hidden w-full grid grid-cols-2 gap-x-4 gap-y-6 sm:gap-x-6 sm:gap-y-8 items-center">
           {cardData.map((card, index) => (
             <motion.div
               key={card.title}
@@ -108,26 +104,26 @@ export default function Benefits() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex justify-center"
+              className="flex justify-center w-full"
             >
               <BenefitCard {...card} />
             </motion.div>
           ))}
-          
-          {/* Fruit basket at bottom for mobile - Made bigger */}
-          <Image
-            src={fruitBasket}
-            alt="Fruit basket"
-            width={180}
-            height={180}
-            className="mt-4 w-28 sm:w-32 md:w-36 h-auto z-20 pointer-events-none select-none"
-            aria-hidden="true"
-          />
+          {/* Fruit basket at bottom for mobile, spanning both columns */}
+          <div className="col-span-2 flex justify-center">
+            <Image
+              src={fruitBasket}
+              alt="Fruit basket"
+              width={180}
+              height={180}
+              className="mt-4 w-28 sm:w-32 md:w-36 h-auto z-20 pointer-events-none select-none"
+              aria-hidden="true"
+            />
+          </div>
         </div>
-
         {/* Desktop Layout: Cross Pattern */}
         <div className="hidden lg:block relative w-full max-w-5xl h-[600px] xl:h-[700px]">
-          {/* Central Fruit Basket - Made bigger */}
+          {/* Central Fruit Basket */}
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             <Image
               src={fruitBasket}
@@ -138,7 +134,6 @@ export default function Benefits() {
               aria-hidden="true"
             />
           </div>
-          
           {/* Top Card - Immune Support */}
           <motion.div
             initial={{ opacity: 0, y: -40 }}
@@ -149,7 +144,6 @@ export default function Benefits() {
           >
             <BenefitCard {...cardData[1]} />
           </motion.div>
-          
           {/* Left Card - Digestive Health */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -160,7 +154,6 @@ export default function Benefits() {
           >
             <BenefitCard {...cardData[0]} />
           </motion.div>
-          
           {/* Right Card - Antioxidant Power */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
@@ -171,7 +164,6 @@ export default function Benefits() {
           >
             <BenefitCard {...cardData[3]} />
           </motion.div>
-          
           {/* Bottom Card - Energy Boost */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}

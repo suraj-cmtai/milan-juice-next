@@ -21,6 +21,12 @@ const menuItems = [
     delay: 0.3,
     alt: "Dry Fruits",
   },
+  {
+    label: "South Indian",
+    img: "/images/dosa-full.png",
+    delay: 0.4,
+    alt: "South Indian",
+  }
 ];
 
 const imgBgMenu = "/images/fruit-leaf-bg.png";
@@ -66,18 +72,18 @@ export default function Menu() {
           </span>
         </div>
         {/* Menu Items */}
-        <div className="w-full flex flex-col gap-8 md:gap-12 lg:gap-16 mb-6 md:mb-8 lg:mb-10 md:flex-row items-stretch md:items-end justify-center">
+        <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12 mb-6 md:mb-8 lg:mb-10 items-stretch justify-center">
           {menuItems.map((item) => (
             <div
               key={item.label}
-              className="flex flex-col items-center flex-1 min-w-0"
+              className="flex flex-col items-center w-full min-w-0"
             >
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: item.delay }}
-                className="shadow-xl flex items-center justify-center w-32 h-44 sm:w-40 sm:h-60 md:w-48 md:h-72 lg:w-56 lg:h-80 aspect-[3/4] rounded-[50%/60%] overflow-hidden mb-3 sm:mb-4 bg-white"
+                className="shadow-xl flex items-center justify-center w-full aspect-[3/4] max-w-[10rem] sm:max-w-[12rem] md:max-w-[14rem] lg:max-w-[16rem] rounded-[50%/60%] overflow-hidden mb-3 sm:mb-4 bg-white"
                 style={{
                   borderRadius: "60% / 60%",
                 }}
@@ -86,6 +92,12 @@ export default function Menu() {
                   src={item.img}
                   alt={item.alt}
                   className="object-cover w-full h-full"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    maxWidth: "100%",
+                    maxHeight: "100%",
+                  }}
                 />
               </motion.div>
               <h3 className="font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl text-black mt-1 sm:mt-2">
