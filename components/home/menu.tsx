@@ -1,6 +1,7 @@
 "use client";
 import GradientButton from '@/components/gradientButton';
 import { motion } from 'framer-motion';
+import { useRouter } from "next/navigation";
 
 const menuItems = [
   {
@@ -32,6 +33,12 @@ const menuItems = [
 const imgBgMenu = "/images/fruit-leaf-bg.png";
 
 export default function Menu() {
+  const router = useRouter();
+
+  const handleViewMenuClick = () => {
+    router.push("/menu");
+  };
+
   return (
     <section className="relative w-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px] pb-10 sm:pb-14 md:pb-16 z-10 flex flex-col items-center justify-center overflow-hidden bg-white">
       {/* Inverted background image at the top, full width */}
@@ -108,7 +115,7 @@ export default function Menu() {
         </div>
         {/* View Menu Button */}
         <div className="mt-2 sm:mt-4 flex justify-center">
-          <GradientButton>View Menu</GradientButton>
+          <GradientButton onClick={handleViewMenuClick}>View Menu</GradientButton>
         </div>
       </div>
     </section>

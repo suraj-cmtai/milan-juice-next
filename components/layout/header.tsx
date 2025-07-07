@@ -11,7 +11,7 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 // Navigation links array
 const navLinks = [
@@ -24,6 +24,7 @@ const navLinks = [
 
 const Header = () => {
   const pathname = usePathname();
+  const router = useRouter();
   const [open, setOpen] = React.useState(false);
   const [show, setShow] = React.useState(true);
   const lastScrollY = React.useRef(0);
@@ -58,7 +59,11 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Remove framer-motion: just use a regular header, hide/show with CSS
+  // Handler for "Order Now" button click
+  const handleOrderNowClick = () => {
+    router.push("/contact");
+  };
+
   return (
     <header
       className={`w-full sticky top-0 left-0 bg-white shadow-sm z-50 transition-all duration-400 ease-in-out ${
@@ -97,7 +102,7 @@ const Header = () => {
         </nav>
         {/* Desktop Order Now */}
         <div className="hidden lg:block">
-          <GradientButton>Order Now</GradientButton>
+          <GradientButton onClick={handleOrderNowClick}>Order Now</GradientButton>
         </div>
         {/* Mobile Hamburger */}
         <div className="lg:hidden flex items-center">
@@ -141,7 +146,12 @@ const Header = () => {
                     </Link>
                   ))}
                   <div className="mt-6">
-                    <GradientButton>Order Now</GradientButton>
+                    <GradientButton onClick={() => {
+                      setOpen(false);
+                      router.push("/contact");
+                    }}>
+                      Order Now
+                    </GradientButton>
                   </div>
                 </nav>
               </div>

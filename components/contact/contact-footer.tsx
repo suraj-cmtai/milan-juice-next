@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const images = [
   "/images/blush-bloom.png",
@@ -16,6 +17,12 @@ const images = [
 ];
 
 export default function ContactFooter() {
+  const router = useRouter();
+
+  const handleViewMenu = () => {
+    router.push("/menu");
+  };
+
   return (
     <section className="relative w-full py-8 px-2 flex flex-col items-center justify-center overflow-hidden bg-white">
       {/* Main content inside max-w-7xl */}
@@ -67,6 +74,7 @@ export default function ContactFooter() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="bg-gradient-to-r from-[#fe5d5c] to-[#921d31] text-[#f2f2f2] font-outfit font-bold text-base sm:text-lg px-8 py-3 rounded-xl shadow-md hover:opacity-90 transition cursor-pointer"
+          onClick={handleViewMenu}
         >
           View Menu
         </motion.button>

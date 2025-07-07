@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import GradientButton from "@/components/gradientButton";
+import { useRouter } from "next/navigation";
 
 const watermelon = "/images/watermelon.png";
 const juiceDripping = "/images/juice-dripping.png";
@@ -9,10 +10,15 @@ const strawberryShake = "/images/strawberry-shake.png";
 const strawberries = "/images/strawberry.png";
 
 export default function Hero() {
+  const router = useRouter();
+
+  const handleExploreClick = () => {
+    router.push("/menu");
+  };
+
   return (
-    <section className="relative w-full h-auto  bg-[#fbdede] overflow-hidden">
-      <div className="relative w-full max-w-7xl mx-auto h-auto ">
-        
+    <section className="relative w-full h-auto bg-[#fbdede] overflow-hidden">
+      <div className="relative w-full max-w-7xl mx-auto h-auto">
         {/* Decorative Images */}
         <img
           src={watermelon}
@@ -45,7 +51,6 @@ export default function Hero() {
 
         {/* Main Content Layout */}
         <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between py-8 lg:py-0 px-4 sm:px-6 lg:px-8 lg:min-h-[90vh]">
-          
           {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -69,14 +74,19 @@ export default function Hero() {
               <br />
               Juice
             </h1>
-            
+
             <div className="mt-2 xl:ml-16">
-              <GradientButton icon={<ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />}>
+              <GradientButton
+                icon={
+                  <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+                }
+                onClick={handleExploreClick}
+              >
                 Explore Our Flavours
               </GradientButton>
             </div>
           </motion.div>
-          
+
           {/* Right Column - Shake Image (Desktop Only) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -89,9 +99,9 @@ export default function Hero() {
               src={strawberryShake}
               alt="Strawberry shake"
               className="w-48 sm:w-56 md:w-64 lg:w-80 xl:w-96 h-auto relative"
-              style={{ 
-                marginTop: '3rem',
-                marginRight: '0.5rem'
+              style={{
+                marginTop: "3rem",
+                marginRight: "0.5rem",
               }}
             />
           </motion.div>

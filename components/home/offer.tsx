@@ -3,10 +3,17 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import GradientButton from "@/components/gradientButton";
+import { useRouter } from "next/navigation";
 
 const imgImage15 = "/images/fruits-juices-bg.png";
 
 export default function Offer() {
+  const router = useRouter();
+
+  const handleOrderNowClick = () => {
+    router.push("/contact");
+  };
+
   return (
     <section
       className="relative w-full py-8 px-2 flex flex-col items-center justify-center overflow-hidden"
@@ -66,7 +73,7 @@ export default function Offer() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          <GradientButton >Order Now</GradientButton>
+          <GradientButton onClick={handleOrderNowClick}>Order Now</GradientButton>
         </motion.span>
       </div>
     </section>
