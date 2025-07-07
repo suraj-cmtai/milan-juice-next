@@ -51,7 +51,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             className="flex-1 flex flex-col justify-start lg:justify-center text-left lg:pr-8 md:ml-16 xl:pr-12 order-2 lg:order-1 mt-16 lg:mt-0 xl:ml-16"
           >
             <h1
@@ -82,7 +82,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.1 }}
             className="hidden lg:flex flex-1 items-center justify-center lg:justify-end order-1 lg:order-2"
           >
             <img

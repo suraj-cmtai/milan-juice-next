@@ -12,7 +12,6 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 
 // Navigation links array
 const navLinks = [
@@ -59,13 +58,12 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Only animate on mount/unmount, not on every scroll event
+  // Remove framer-motion: just use a regular header, hide/show with CSS
   return (
-    <motion.header
-      initial={{ y: -60, opacity: 0 }}
-      animate={{ y: show ? 0 : -60, opacity: show ? 1 : 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
-      className="w-full sticky top-0 left-0 bg-white shadow-sm z-50 transition-all"
+    <header
+      className={`w-full sticky top-0 left-0 bg-white shadow-sm z-50 transition-all duration-400 ease-in-out ${
+        show ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-16 pointer-events-none"
+      }`}
       style={{ willChange: "transform" }}
     >
       <div className="w-full max-w-7xl mx-auto flex items-center justify-between px-4 py-2 min-h-[80px]">
@@ -151,7 +149,7 @@ const Header = () => {
           </Sheet>
         </div>
       </div>
-    </motion.header>
+    </header>
   );
 };
 
