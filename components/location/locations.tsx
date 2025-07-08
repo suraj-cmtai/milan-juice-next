@@ -10,7 +10,7 @@ const locations = [
   {
     name: "Milan juice center",
     address: "Mallepally Opp:- Badi Masjid",
-    time: "08:00am -10:00pm",
+    time: "10:00am -01:00am",
     directions: "Get Directions",
     phone: ["+91 8008100687", "+91 6309918500"],
     bg: "bg-[rgba(237,251,222,0.31)]",
@@ -18,7 +18,7 @@ const locations = [
   {
     name: "Milan juice center& Shawarma",
     address: "Mallepally Opp:- Badi Masjid",
-    time: "08:00am -10:00pm",
+    time: "10:00am -01:00am",
     directions: "Get Directions",
     phone: ["+91 8008100687", "+91 6309918500"],
     bg: "bg-[rgba(251,222,222,0.48)]",
@@ -26,7 +26,7 @@ const locations = [
   {
     name: "Milan juice center& Shawarma",
     address: "Madhapur   opp:- Gowra Fountain Head ,Mindspace",
-    time: "08:00am -10:00pm",
+    time: "10:00am -01:00am",
     directions: "Get Directions",
     phone: ["+91 8008100687", "+91 6309918500"],
     bg: "bg-[rgba(228,222,251,0.48)]",
@@ -34,7 +34,7 @@ const locations = [
   {
     name: "Milan juice center & Shawarma",
     address: "Gachibowli  Opp:- DLF Gate 2",
-    time: "08:00am -10:00pm",
+    time: "10:00am -01:00am",
     directions: "Get Directions",
     phone: ["+91 8008100687", "+91 6309918500"],
     bg: "bg-[rgba(252,231,176,0.57)]",
@@ -42,7 +42,7 @@ const locations = [
   {
     name: "Milan juice center &shawarma",
     address: "Gachibowli  Opp:-DLF Gate 3..",
-    time: "08:00am -10:00pm",
+    time: "10:00am -01:00am",
     directions: "Get Directions",
     phone: ["+91 8008100687", "+91 6309918500"],
     bg: "bg-[rgba(232,133,202,0.31)]",
