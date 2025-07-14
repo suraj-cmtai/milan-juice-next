@@ -123,13 +123,13 @@ const Footer = () => {
               |
             </span>
             <span className="text-[#F2F2F2] font-bold text-base sm:text-lg md:text-2xl lg:text-3xl text-center">
-              Monday - Saturday
+              Monday - Sunday
             </span>
             <span className="hidden sm:inline-block text-[#F2F2F2] font-bold text-base sm:text-lg md:text-2xl lg:text-3xl text-center">
               |
             </span>
             <span className="text-[#F2F2F2] font-bold text-base sm:text-lg md:text-2xl lg:text-3xl text-center">
-              08.00 am - 10.00 pm
+              09:00 am - 01:00 am
             </span>
           </motion.div>
           {/* Main Content */}
