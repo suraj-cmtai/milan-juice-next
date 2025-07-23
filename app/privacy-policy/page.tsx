@@ -27,7 +27,7 @@ export default function PrivacyPolicy() {
         </h1>
         <div className="text-gray-700 space-y-8">
           <div className="text-sm text-gray-500">
-            Effective Date: July 23, 2025
+            Effective Date: July 02, 2025
             <br />
             Website: https://milanjuicecenter.com
           </div>

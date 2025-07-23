@@ -27,7 +27,7 @@ export default function TermsAndConditions() {
         </h1>
         <div className="text-gray-700 space-y-8">
           <div className="text-sm text-gray-500">
-            Effective Date: July 23, 2025
+            Effective Date: July 02, 2025
             <br />
             Platform: Mobile App
             <br />
@@ -151,7 +151,7 @@ export default function TermsAndConditions() {
             <h2 className="text-xl sm:text-2xl font-semibold text-[#FE5D5C]">12. Governing Law</h2>
             <p>
               These Terms are governed by the laws of India. Any disputes will be subject to the jurisdiction 
-              of courts located in Hyderabad.
+              of courts located in Noida.
             </p>
           </section>
 
