@@ -9,8 +9,11 @@ const grapes = "/images/grapes-vector.png";
 
 const usefulLinks = [
   { label: "Home", href: "/" },
-  { label: "contact Us", href: "/contact" },
-  { label: "Menu", href: "#" },
+  { label: "Contact Us", href: "/contact" },
+  { label: "Menu", href: "/menu" }, 
+  { label: "Location", href: "/location" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
 ];
 const support = [
   { icon: <Phone className="w-5 h-5" />, text: "+91 8008100687" },
@@ -224,7 +227,7 @@ const Footer = () => {
             className="w-full flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 border-t border-black/10 pt-4 sm:pt-6"
           >
             <span className="font-semibold text-sm sm:text-base md:text-lg text-black text-center">
-              © 2025 Milan Juice || All Rights Reserved
+              © 2025 Milan Juice Center || All Rights Reserved
             </span>
             <div className="flex items-center gap-2 sm:gap-4 mt-2 sm:mt-0">
               {socials.map((s, i) => (
