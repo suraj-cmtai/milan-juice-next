@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 
-const PDF_URL = "/pdf/dlf-menu.pdf";
+// const PDF_URL = "/pdf/dlf-menu.pdf";
+const PDF_URL = "/pdf/MILAN_JUICE_CENTER_MENU.pdf"
+
 
 export default function MenuPDFViewer() {
   return (
