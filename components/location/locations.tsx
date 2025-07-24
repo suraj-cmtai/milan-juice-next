@@ -47,6 +47,14 @@ const locations = [
     phone: ["+91 8008100687", "+91 6309918500"],
     bg: "bg-[rgba(232,133,202,0.31)]",
   },
+  {
+    name: "Milan juice center & Shawarma",
+    address: "Jahanuma",
+    time: "10:00am -01:00am",
+    directions: "Get Directions",
+    phone: ["+91 8008100687", "+91 6309918500"],
+    bg: "bg-[rgba(251,222,222,0.48)]",
+  },
 ];
 
 export default function Locations() {
